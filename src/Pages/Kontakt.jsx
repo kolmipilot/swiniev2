@@ -1,5 +1,5 @@
 import Navbar from '../Components/Navbar';
-
+import Contact from '../Components/Contact';
 
 const Kontakt = () => {
 
@@ -8,7 +8,7 @@ const Kontakt = () => {
     
     <div className="w-full center text-center">
         <Navbar/>
-        <h1 className="text-3xl text-black">Kontakt</h1>
+        <Contact/>
     </div>
     </>
   );
