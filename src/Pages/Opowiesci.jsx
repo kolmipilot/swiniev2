@@ -25,8 +25,9 @@ const Opowiesci = () => {
 
   return (
     <>
-      <div className="w-full center">
+      <div className="w-full center text-center">
         <Navbar />
+        <h1 className="text-3xl text-black">Parlińskie opowiesci</h1>
         <div className='grid grid-cols-2 md:grid-cols-2 gap-4 center mt-5'>
           <Card
             name="O wujku co wpadł do rowu"
