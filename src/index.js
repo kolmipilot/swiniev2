@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import App from './App';
+import Main from './Pages/Main';
+import Opowiesci from './Pages/Opowiesci';
+
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Main />} />
+        <Route path="opowiesci" element={<Opowiesci />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+root.render(<App />);

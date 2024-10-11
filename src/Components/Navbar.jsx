@@ -5,25 +5,25 @@ import Main from '../Pages/Main';
 const Navbar = () => {
   return (
     <>
-    <nav className="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-white bg-opacity-90 sticky top-3 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
-    <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-      <Link to={Main}
-        className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold">
-        <img src={logo} alt="" className='object-cover object-center rounded-full h-20 w-20'/>
+    <nav className="bg-white">
+    <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800 bg-white">
+      <Link to="/"
+        className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold bg-white">
+        <img src={logo} alt="" className='object-cover object-center rounded-full h-20 w-20 bg-white'/>
       </Link>
-      <div className="hidden lg:block">
-        <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <Link to={Main} href="#" className="flex items-center">O nas</Link>
+      <div className="hidden lg:block bg-white">
+        <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 bg-white">
+          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
+            <Link to="/" href="#" className="flex items-center bg-white">O nas</Link>
           </li>
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#" className="flex items-center">Opowieści</a>
+          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
+            <Link to="/opowiesci" className="flex items-center bg-white">Opowieści</Link>
           </li>
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#" className="flex items-center">Bohaterowie</a>
+          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
+            <a href="#" className="flex items-center bg-white">Bohaterowie</a>
           </li>
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#" className="flex items-center">Kontakt</a>
+          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
+            <a href="#" className="flex items-center bg-white">Kontakt</a>
           </li>
         </ul>
       </div>
