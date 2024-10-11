@@ -7,7 +7,7 @@ function Card({ name, text, img, onClick }) {
         data-modal-target="default-modal"
         data-modal-toggle="default-modal"
         type="button"
-        className="flex flex-col items-center bg-white border border-light-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-light-100 dark:border-light-700 dark:bg-light-800 dark:hover:bg-light-700 m-auto p-10 w-full h-full"
+        className="flex flex-col items-center bg-white border border-light-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-light-100 m-auto p-10 w-full h-full"
         onClick={onClick} // Dodanie obsługi kliknięcia
       >
         <img
