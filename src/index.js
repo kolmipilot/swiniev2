@@ -5,6 +5,7 @@ import './index.css';
 import Main from './Pages/Main';
 import Opowiesci from './Pages/Opowiesci';
 import Bohaterowie from './Pages/Bohaterowie';
+import Kontakt from './Pages/Kontakt';
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route index element={<Main />} />
         <Route path="opowiesci" element={<Opowiesci />} />
         <Route path="bohaterowie" element={<Bohaterowie />} />
+        <Route path="kontakt" element={<Kontakt />} />
       </Routes>
     </BrowserRouter>
   );
