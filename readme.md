@@ -1,0 +1,1 @@
+strona na której publikowane są historyczne kroniki tajemniej miejsowości. Jest to jedyna taka strona na świecie.
