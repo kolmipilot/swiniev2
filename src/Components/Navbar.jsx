@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link to="/opowiesci" className="flex items-center bg-white">Opowieści</Link>
           </li>
           <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
-            <a href="#" className="flex items-center bg-white">Bohaterowie</a>
+            <Link to='/bohaterowie' className="flex items-center bg-white">Bohaterowie</Link>
           </li>
           <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
             <a href="#" className="flex items-center bg-white">Kontakt</a>

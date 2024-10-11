@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import Main from './Pages/Main';
 import Opowiesci from './Pages/Opowiesci';
+import Bohaterowie from './Pages/Bohaterowie';
 
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route index element={<Main />} />
         <Route path="opowiesci" element={<Opowiesci />} />
+        <Route path="bohaterowie" element={<Bohaterowie />} />
       </Routes>
     </BrowserRouter>
   );
