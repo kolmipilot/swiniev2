@@ -8,7 +8,7 @@ const Bohaterowie = () => {
     
     <div className="w-full center">
         <Navbar/>
-            <div className='grid grid-cols-2 md:grid-cols-2 gap-4 center mt-5 mb-5'>
+            <div className='grid grid-cols-3 md:grid-cols-3 gap-4 center mt-5 mb-5 p-1'>
                 <Cardb name="Wujek" text="Starszy człowiek z problem alkoholowym, lubi jeździć na rowerze, jego pasje to informatyka i turystyka."/>
                 <Cardb name="Przemek" text="Ojciec głównego bohatera, lubi sobie gulnąć jak kazdy, nie oszczędza pasa."/>
                 <Cardb name="Fylyp" text="Główny bohater, miły pomocny, prawdopodbnie jedynyna pozytywna postać w uniwersum."/>

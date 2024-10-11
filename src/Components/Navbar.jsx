@@ -1,45 +1,70 @@
-import React from 'react'
-import logo from './pig.png'
+import React, { useState } from 'react';
+import logo from './pig.png';
 import { Link } from "react-router-dom";
-import Main from '../Pages/Main';
-const Navbar = () => {
-  return (
-    <>
-    <nav className="bg-white">
-    <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800 bg-white">
-      <Link to="/"
-        className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold bg-white">
-        <img src={logo} alt="" className='object-cover object-center rounded-full h-20 w-20 bg-white'/>
-      </Link>
-      <div className="hidden lg:block bg-white">
-        <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 bg-white">
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
-            <Link to="/" href="#" className="flex items-center bg-white">O nas</Link>
-          </li>
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
-            <Link to="/opowiesci" className="flex items-center bg-white">Opowieści</Link>
-          </li>
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
-            <Link to='/bohaterowie' className="flex items-center bg-white">Bohaterowie</Link>
-          </li>
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 bg-white">
-            <a href="#" className="flex items-center bg-white">Kontakt</a>
-          </li>
-        </ul>
-      </div>
-      <button
-        className="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-        type="button">
-        <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </span>
-      </button>
-    </div>
-  </nav>
-  </>
-  )
-}
 
-export default Navbar
+const Navbar = () => {
+  // Ustawiamy stan dla otwartego/zamkniętego menu
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Funkcja do przełączania stanu menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className="bg-white border-gray-200">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 bg-white">
+        <Link
+          to="/"
+          className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold bg-white"
+        >
+          <img src={logo} alt="" className='object-cover object-center rounded-full h-20 w-20 bg-white' />
+        </Link>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          onClick={toggleMenu} // Dodajemy obsługę kliknięcia
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded={isOpen} // Ustawiamy aria-expanded na podstawie stanu
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        {/* Zmieniamy widoczność menu na podstawie stanu isOpen */}
+        <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto bg-white`} id="navbar-default">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <li>
+              <Link to="/" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200" aria-current="page">O nas</Link>
+            </li>
+            <li>
+              <Link to="/opowiesci" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Opowieści</Link>
+            </li>
+            <li>
+              <Link to='/bohaterowie' className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Bohaterowie</Link>
+            </li>
+            <li>
+              <a href="#" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
