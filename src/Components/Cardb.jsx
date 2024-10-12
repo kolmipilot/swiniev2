@@ -1,6 +1,6 @@
 import React from 'react';
-
-function Card({ name, text, img, onClick }) {
+import avatar from '../images/user.png'
+function Card({ name, text, img=avatar, onClick }) {
   return (
     <>
       <button
