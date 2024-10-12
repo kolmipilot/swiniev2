@@ -28,7 +28,7 @@ const Opowiesci = () => {
       <div className="w-full center text-center">
         <Navbar />
         <h1 className="text-3xl text-black">Parlińskie opowiesci</h1>
-        <div className='grid grid-cols-2 md:grid-cols-2 gap-4 center mt-5'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 center mt-5'>
           <Card
             name="O wujku co wpadł do rowu"
             text="krótki wierszyk o jednej z głównych postaci czyli wujku"
