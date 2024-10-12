@@ -4,6 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+src/Pass.jsx
+.firebaserc
+firebase.json
+package-lock.json
+package.json
+.firebase
+functions
 
 # testing
 /coverage
