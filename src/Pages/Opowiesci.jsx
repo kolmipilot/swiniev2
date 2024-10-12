@@ -4,6 +4,7 @@ import Card from '../Components/Card';
 import Modal from '../Components/Modal'; // Import modal
 import wujek from '../images/rowerzysta-pijany.jpg';
 import Owujku from '../kroniki/Owujku';
+import Oczlowiekunaswini from '../kroniki/Oczlowiekunaswini';
 
 const Opowiesci = () => {
   const Owujkutext = Owujku;
@@ -36,10 +37,10 @@ const Opowiesci = () => {
             onClick={() => openModal("O wujku co wpadł do rowu",Owujkutext)}
           />
           <Card
-            name="Lorem ipsum"
-            text="Lorem ipsum Lorem ipsum"
+            name="O człowieku na świni"
+            text="Kornika z dawnych lat, prawdobodbnie o jedenj z głównych postaci czyli Przemku. Występuje tam również główny bohater"
             img={wujek}
-            onClick={() => openModal("Lorem ipsum", "Treść Lorem ipsum.")}
+            onClick={() => openModal("O człowieku na świni", Oczlowiekunaswini)}
           />
           <Card
             name="Lorem ipsum"

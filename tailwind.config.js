@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sofadi': ['Sofadi One', 'sans-serif'], // Dodaj czcionkę Sofadi One
+      },
+    },
   },
   plugins: [],
 }
