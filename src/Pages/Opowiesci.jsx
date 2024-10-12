@@ -5,6 +5,7 @@ import Modal from '../Components/Modal'; // Import modal
 import wujek from '../images/rowerzysta-pijany.jpg';
 import Owujku from '../kroniki/Owujku';
 import Oczlowiekunaswini from '../kroniki/Oczlowiekunaswini';
+import hogrider from '../images/Hog_Rider_card_render.png'
 
 const Opowiesci = () => {
   const Owujkutext = Owujku;
@@ -39,7 +40,7 @@ const Opowiesci = () => {
           <Card
             name="O człowieku na świni"
             text="Kornika z dawnych lat, prawdobodbnie o jedenj z głównych postaci czyli Przemku. Występuje tam również główny bohater"
-            img={wujek}
+            img={hogrider}
             onClick={() => openModal("O człowieku na świni", Oczlowiekunaswini)}
           />
           <Card
