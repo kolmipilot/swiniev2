@@ -33,7 +33,7 @@ const Opowiesci = () => {
             name="O wujku co wpadł do rowu"
             text="krótki wierszyk o jednej z głównych postaci czyli wujku"
             img={wujek}
-            onClick={() => openModal("O wujku co wpadł do rowu", {Owujkutext})}
+            onClick={() => openModal("O wujku co wpadł do rowu",Owujkutext)}
           />
           <Card
             name="Lorem ipsum"

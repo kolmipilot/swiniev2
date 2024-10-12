@@ -5,9 +5,11 @@ const Modal = ({ isOpen, onClose, title, content }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <p>{content}</p>
+      <div className="bg-white rounded-lg shadow-lg p-6 max-h-screen max-w-screen-md w-full h-auto rounded-3xl object-cover border-gray-200 border-2">
+        <h2 className="text-xl font-bold bg-white">{title}</h2>
+        <div className="overflow-y-auto max-h-[60vh] my-4"> {/* Zawijamy wiersz w przewijalny kontener */}
+          <pre className="whitespace-pre-wrap bg-slate-100">{content}</pre> {/* Pre with wrapping */}
+        </div>
         <button className="mt-4 bg-blue-500 text-white rounded px-4 py-2" onClick={onClose}>
           Zamknij
         </button>

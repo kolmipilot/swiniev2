@@ -1,4 +1,4 @@
-/*const Owujku = 'Był sobie pewien wujek, co przed pracą lubił wypić,  
+const Owujku = `Był sobie pewien wujek, co przed pracą lubił wypić,  
 Gdy wyruszał w długą drogę, pragnienie zaczęło go gnębić.  
 Bez długiego namysłu, do monopolowego wstąpił,  
 Wsiadł na rower, w drodze do wsi, pragnienie w nim wzrosło.  
@@ -8,7 +8,7 @@ Wszedł do sklepu, gdzie trunek wymarzony czekał,
 Szybko go wypił, na rower wskoczył, w dal pojechał.  
 Jednak po chwili, ziemia pod nim zaczęła uciekać,  
 Choć walczył dzielnie, w końcu musiał się poddać.  
-Do rowu wpadł, zmęczony i pokonany,  
+Do rowu wpadł, zmęczony i pokonany,
 Tak skończył się dzień, który miał być zwyczajny.  
 W rowie leżał, myśli w głowie kłębiły się gęsto,  
 Czy warto było pić, czy to tylko złudne szczęście?  
@@ -30,6 +30,6 @@ Smutne zakończenie, które znów go pokonało,
 W rowie leżał, sam w ciemności, znów smutny i mały.  
 Czy życie znów mu da szansę, czy zamknie drzwi?  
 Znowu z trwogą w sercu, znów wódką swą skryty.
-'
+`;
 
-export default Owujku ;*/
+export default Owujku;
