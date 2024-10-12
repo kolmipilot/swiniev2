@@ -6,6 +6,8 @@ import wujek from '../images/rowerzysta-pijany.jpg';
 import Owujku from '../kroniki/Owujku';
 import Oczlowiekunaswini from '../kroniki/Oczlowiekunaswini';
 import hogrider from '../images/Hog_Rider_card_render.png'
+import Sigma from '../kroniki/Sigma';
+import Sigmajpg from '../images/sigmaimg.jpg'
 
 const Opowiesci = () => {
   const Owujkutext = Owujku;
@@ -44,10 +46,10 @@ const Opowiesci = () => {
             onClick={() => openModal("O człowieku na świni", Oczlowiekunaswini)}
           />
           <Card
-            name="Lorem ipsum"
-            text="Lorem ipsum Lorem ipsum"
-            img={wujek}
-            onClick={() => openModal("Lorem ipsum", "Treść Lorem ipsum.")}
+            name="Sigma"
+            text="Tajemnicza kronika, napisana trudnym jezykiem. Niektórzy eksperci mówia że może być podorbiona."
+            img={Sigmajpg}
+            onClick={() => openModal("Sigma", Sigma)}
           />
           <Card
             name="Lorem ipsum"
