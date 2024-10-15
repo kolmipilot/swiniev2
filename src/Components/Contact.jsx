@@ -36,7 +36,7 @@ import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from '../Pas
     <>
      <section className="">
   <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Kontakt</h2>
+      <h2 className="text-indigo-700 text-4xl font-bold font-manrope leading-normal text-center">Kontakt</h2>
       <p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Jesli masz jakieś roszczenia do treści umieszczonych na stronie, albo chcez zaproponować tekst do wstawienia na stronie, skontaktuj sie z nami.</p>
       <form onSubmit={sendEmail} className="space-y-8">
           <div>
