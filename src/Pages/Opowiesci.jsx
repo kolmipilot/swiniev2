@@ -31,7 +31,7 @@ const Opowiesci = () => {
     <>
       <div className="w-full center text-center">
         <Navbar />
-        <h1 className="text-3xl text-black">Parlińskie opowiesci</h1>
+        <h1 className="text-indigo-700 text-4xl font-bold font-manrope leading-normal text-center">Parlińskie opowiesci</h1>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 center mt-5'>
           <Card
             name="O wujku co wpadł do rowu"
