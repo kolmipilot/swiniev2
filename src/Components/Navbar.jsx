@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './pig.png';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   // Ustawiamy stan dla otwartego/zamkniętego menu
@@ -10,14 +10,18 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+    const location = useLocation(); // Pobieramy aktualną lokalizację (link)
+  
+    const isActive = (path) => {
+      return location.pathname === path ? 'text-blue-500 font-bold' : 'text-gray-500'; // Dodajemy klasę Tailwind do podświetlenia aktywnego linku
+    };
 
   return (
     <nav className="bg-white border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 bg-white">
         <Link
           to="/"
-          className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold bg-white"
-        >
+          className={`mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold bg-white`}>
           <img src={logo} alt="" className='object-cover object-center rounded-full h-20 w-20 bg-white' />
         </Link>
         <button
@@ -49,19 +53,19 @@ const Navbar = () => {
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto bg-white`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
             <li>
-              <Link to="/" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200" aria-current="page">O nas</Link>
+              <Link to="/" className={`${isActive("/")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`} aria-current="page">O nas</Link>
             </li>
             <li>
-              <Link to="/opowiesci" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Opowieści</Link>
+              <Link to="/opowiesci" className={`${isActive("/opowiesci")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Opowieści</Link>
             </li>
             <li>
-              <Link to='/bohaterowie' className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Bohaterowie</Link>
+              <Link to='/bohaterowie' className={`${isActive("/bohaterowie")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Bohaterowie</Link>
             </li>
             <li>
-              <Link to='/kontakt' className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Kontakt</Link>
+              <Link to='/kontakt' className={`${isActive("/kontakt")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Kontakt</Link>
             </li>
             <li>
-            <a href='https://bebekxdw.ct8.pl' className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200">Generator</a>
+            <Link to='/generator' className={`${isActive("/generator")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Generator</Link>
             </li>
 
           </ul>
