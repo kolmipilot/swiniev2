@@ -7,6 +7,7 @@ import Opowiesci from './Pages/Opowiesci';
 import Bohaterowie from './Pages/Bohaterowie';
 import Kontakt from './Pages/Kontakt';
 import Generator from './Pages/Generatorpage';
+import Gra from './Pages/Gra';
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="bohaterowie" element={<Bohaterowie />} />
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="generator" element={<Generator />}/>
+        <Route path="gra" element={<Gra />}/>
       </Routes>
     </BrowserRouter>
   );

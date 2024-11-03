@@ -67,6 +67,9 @@ const Navbar = () => {
             <li>
             <Link to='/generator' className={`${isActive("/generator")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Generator</Link>
             </li>
+            <li>
+            <Link to='/gra' className={`${isActive("/generator")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Gra</Link>
+            </li>
 
           </ul>
         </div>
