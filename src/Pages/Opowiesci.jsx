@@ -8,6 +8,8 @@ import Oczlowiekunaswini from '../kroniki/Oczlowiekunaswini';
 import hogrider from '../images/Hog_Rider_card_render.png'
 import Sigma from '../kroniki/Sigma';
 import Sigmajpg from '../images/sigmaimg.jpg'
+import Fraszka from '../kroniki/Fraszka';
+import Wodka from '../images/wodka.jpg'
 
 const Opowiesci = () => {
   const Owujkutext = Owujku;
@@ -52,10 +54,10 @@ const Opowiesci = () => {
             onClick={() => openModal("Sigma", Sigma)}
           />
           <Card
-            name="Lorem ipsum"
-            text="Lorem ipsum Lorem ipsum"
-            img={wujek}
-            onClick={() => openModal("Lorem ipsum", "Treść Lorem ipsum.")}
+            name="Fraszka o flaszce"
+            text="Kronika o pięknym i życiodajnym napoju."
+            img={Wodka}
+            onClick={() => openModal("Fraszka o flaszce", Fraszka)}
           />
         </div>
         <Modal
