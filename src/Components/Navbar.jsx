@@ -51,24 +51,27 @@ const Navbar = () => {
         </button>
         {/* Zmieniamy widoczność menu na podstawie stanu isOpen */}
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto bg-white`} id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
-            <li>
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white space-y-4 md:space-y-0 justify-center text-center">
+            <li className='bg-white'>
               <Link to="/" className={`${isActive("/")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`} aria-current="page">O nas</Link>
             </li>
-            <li>
+            <li  className='bg-white'>
               <Link to="/opowiesci" className={`${isActive("/opowiesci")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Opowieści</Link>
             </li>
-            <li>
+            <li  className='bg-white'>
               <Link to='/bohaterowie' className={`${isActive("/bohaterowie")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Bohaterowie</Link>
             </li>
-            <li>
+            <li  className='bg-white'>
               <Link to='/kontakt' className={`${isActive("/kontakt")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Kontakt</Link>
             </li>
-            <li>
+            <li  className='bg-white'>
             <Link to='/generator' className={`${isActive("/generator")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Generator</Link>
             </li>
-            <li>
-            <Link to='/gra' className={`${isActive("/generator")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Gra</Link>
+            <li  className='bg-white'>
+            <Link to='/gra' className={`${isActive("/gra")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Gra</Link>
+            </li>
+            <li  className='bg-white'>
+            <Link to='/zombiegra' className={`${isActive("/zombiegra")}block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 bg-white border-t border-gray-200`}>Zombie shooter</Link>
             </li>
 
           </ul>

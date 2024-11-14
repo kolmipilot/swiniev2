@@ -8,6 +8,7 @@ import Bohaterowie from './Pages/Bohaterowie';
 import Kontakt from './Pages/Kontakt';
 import Generator from './Pages/Generatorpage';
 import Gra from './Pages/Gra';
+import Zombiegra from './Pages/Zombiegra.jsx';
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="generator" element={<Generator />}/>
         <Route path="gra" element={<Gra />}/>
+        <Route path="zombiegra" element={<Zombiegra />}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 
-const Game = () => {
- 
+const Zombie = () => {
+  
   return (
     <div className="w-full h-screen">
       <iframe
-        src="https://pigplatformer.web.app"
-        title="Pig Platformer Game"
+        src="https://zombie2dshooter.web.app"
+        title="zombie 2d shooter"
         className="w-full h-full"
         frameBorder="0"
         allowFullScreen
@@ -15,4 +15,4 @@ const Game = () => {
   );
 };
 
-export default Game;
+export default Zombie;
