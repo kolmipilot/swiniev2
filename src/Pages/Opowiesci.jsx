@@ -9,7 +9,9 @@ import hogrider from '../images/Hog_Rider_card_render.png'
 import Sigma from '../kroniki/Sigma';
 import Sigmajpg from '../images/sigmaimg.jpg'
 import Fraszka from '../kroniki/Fraszka';
-import Wodka from '../images/wodka.jpg'
+import Wodka from '../images/wodka.jpg';
+import Swieto from '../kroniki/Swieto';
+import Ziemniak from '../images/ziemniak.jpg'
 
 const Opowiesci = () => {
   const Owujkutext = Owujku;
@@ -59,6 +61,19 @@ const Opowiesci = () => {
             img={Wodka}
             onClick={() => openModal("Fraszka o flaszce", Fraszka)}
           />
+           <Card
+            name="Parlinskie święto"
+            text="Kronika o przebiegu jednego z najwazniejszych świąt w parlinie."
+            img={Ziemniak}
+            onClick={() => openModal("Parlinskie święto", Swieto)}
+          />
+          <Card
+            name="Comming soon"
+            text="Comming soon Comming soon Comming soon Comming soon"
+            img={Wodka}
+            onClick={() => openModal("Comming soon", )}
+          />
+
         </div>
         <Modal
           isOpen={isModalOpen}
